@@ -27,12 +27,8 @@ public class Main {
         // TODO Task 3 implement this code so that it is entirely consistent with its provided documentation.
         try {
             List<String> subBreeds = breedFetcher.getSubBreeds(breed);
-            if (subBreeds == null) {
-                return 0;
-            }
-            return subBreeds.size();
+            return (subBreeds == null) ? 0 : subBreeds.size();
         } catch (BreedFetcher.BreedNotFoundException e) {
-            // if breed not found, return 0 instead of crashing
             return 0;
         }
     }
